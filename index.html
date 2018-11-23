@@ -7,10 +7,10 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа Бородинский">
+        <a class="main-header-logo" arai-label="барбершоп «Бородинский»">
+          <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
         </a>
-        <ul class="header__main-menu_list">
+        <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="newss.html">Новости</a></li>
           <li><a href="price.html">Прайс-лист</a></li>
@@ -18,7 +18,9 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="signIn.html">Вход</a></li>
+          <li>
+            <a href="login.html">Вход</a>
+          </li>
         </ul>      
       </nav>
     </header>
@@ -29,9 +31,7 @@
         <ul class="feature-list">
           <li class="feature-item">
             <h3>Быстро</h3>
-            <p>
-            МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
-            </p>
+            <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
           </li>
           <li class="feature-item">
             <h3>Круто</h3>
@@ -60,10 +60,12 @@
       <section class="gallery">
         <h2>Фотогалерея</h2>
         <figure class="gallery-content">
-          <a href="#"><img src="img/layer-21.jpg" width="286" height="164" alt="Интерьер"></a>
+          <a href="#">
+            <img src="img/layer-21.jpg" width="286" height="164" alt="Интерьер">
+          </a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-next">Вперед</span>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
       </section>
       <section class="contacts">
         <h2>Контактная информацияa</h2>
@@ -83,7 +85,26 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p>УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-        <!-- здесь будет форма  -->
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-phone">Ваше имя</label>
+            <input id="appointment-phone" type="tel" name="tel" value="" placeholder="+7 123 456-78-90">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
@@ -109,21 +130,40 @@
       </div>
       <p class="footer-copyright">
         <b>Разарботано:</b>
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="button" href="https://htmlacademy.ru" aria-label="Сайт разработчика">HTML Academy</a>
       </p>
     </footer>
     <!-- модальные окна входа в личный кабинет и карты проезда -->
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember">
+            Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <a class="modal-map" href="#"><img src="img/map.jpg" alt="Карта проезда"></a>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+      <button class="modal-close">Закрыть</button>
     </section>
 
   </body>
