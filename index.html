@@ -13,25 +13,29 @@
         <a class="main-header-logo" arai-label="барбершоп «Бородинский»">
           <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
         </a>
-        <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="newss.html">Новости</a></li>
-          <li><a href="price.html">Прайс-лист</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li>
-            <a href="login.html">Вход</a>
-          </li>
-        </ul>      
+        <div class="main-navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="info.html">Информация</a></li>
+              <li><a href="newss.html">Новости</a></li>
+              <li><a href="price.html">Прайс-лист</a></li>
+              <li><a href="catalog.html">Магазин</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li>
+                <a href="login.html">Вход</a>
+              </li>
+            </ul>      
+          </div>
+        </div>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">«Барбершоп Бородинский»</h1>
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="feature-list">
+        <ul class="features-list">
           <li class="feature-item">
             <h3>Быстро</h3>
             <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
@@ -115,35 +119,37 @@
       </div>
     </main>
     <footer class="main-footer">
-      <address class="footer-contacts">
-        БАРБЕРШОП «БОРОДИНСКИЙ» <br>
-        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br>
-        <a href="map.html">Как нас найти?</a> <br>
-        <a href="callto:+78126660266">Телефон: +7 (812) 666-02-66</a>
-      </address>
-      <div class="footer-social">
-        <b>Давайте дружить!</b>
-        <ul>
-          <li>
-            <a class="social-button" href="#">Вконтакте</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Инстаграм</a>
-          </li>
-        </ul>
+      <div class="container">
+        <address class="footer-contacts">
+          БАРБЕРШОП «БОРОДИНСКИЙ» <br>
+          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br>
+          <a href="map.html">Как нас найти?</a> <br>
+          <a href="callto:+78126660266">Телефон: +7 (812) 666-02-66</a>
+        </address>
+        <div class="footer-social">
+          <b>Давайте дружить!</b>
+          <ul>
+            <li>
+              <a class="social-button" href="#">Вконтакте</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Инстаграм</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-copyright">
+          <b>Разарботано:</b>
+          <a class="button" href="https://htmlacademy.ru" aria-label="Сайт разработчика">HTML Academy</a>
+        </p>
       </div>
-      <p class="footer-copyright">
-        <b>Разарботано:</b>
-        <a class="button" href="https://htmlacademy.ru" aria-label="Сайт разработчика">HTML Academy</a>
-      </p>
     </footer>
     <!-- модальные окна входа в личный кабинет и карты проезда -->
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
+      <p>Введите пожалуйста свой логин и пароль.</p>
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="user-login">Логин</label>
